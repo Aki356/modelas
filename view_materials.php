@@ -47,13 +47,9 @@ if (!empty($filter_title)) {
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
+<?php $title_page = "Методические материалы";
+include("src/head.php"); ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>View Materials</title>
-</head>
-<body>
     <h1>Available Materials</h1>
 
     <h2>Filter Materials</h2>
@@ -93,8 +89,18 @@ $result = $stmt->get_result();
     </div>
 
     <a href="index.php">Back to Home</a>
+
+<?php include("src/footer.php"); ?>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>View Materials</title>
+</head>
+<body>
+    
 </body>
-</html>
+</html> -->
 
 <?php
 $stmt->close();

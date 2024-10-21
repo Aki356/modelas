@@ -46,13 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $conn->close();
 ?>
+<?php $title_page = "Добавить новую новость";
+include("src/head.php"); ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add News</title>
-</head>
-<body>
     <h1>Add News</h1>
     <?php if ($error_message): ?>
         <p style="color: red;"><?php echo $error_message; ?></p>
@@ -63,5 +59,15 @@ $conn->close();
         <input type="file" name="image" accept="image/*" required>
         <button type="submit">Add News</button>
     </form>
+
+<?php include("src/footer.php"); ?>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Add News</title>
+</head>
+<body>
+    
 </body>
-</html>
+</html> -->

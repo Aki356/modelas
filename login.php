@@ -39,13 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin Login</title>
-</head>
-<body>
-    <form method="post">
+<?php $title_page = "Вход в панель администратора";
+include("src/head.php"); ?>
+
+<form method="post">
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Login</button>
@@ -53,5 +50,15 @@ $conn->close();
     <?php if (isset($error_message)): ?>
         <p style="color: red;"><?php echo $error_message; ?></p>
     <?php endif; ?>
+
+<?php include("src/footer.php"); ?>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+</head>
+<body>
+    
 </body>
-</html>
+</html> -->

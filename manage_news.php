@@ -51,13 +51,9 @@ if (!empty($filter_title) && !empty($filter_date)) {
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
+<?php $title_page = "Новости в панели администратора";
+include("src/head.php"); ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Manage News</title>
-</head>
-<body>
     <h1>Manage News</h1>
     
     <h2>Filter News</h2>
@@ -96,8 +92,17 @@ $result = $stmt->get_result();
         <?php endwhile; ?>
     </table>
     <a href="admin_panel.php">Back to Admin Panel</a>
+
+<?php include("src/footer.php"); ?>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Manage News</title>
+</head>
+<body>
+    
 </body>
-</html>
+</html> -->
 
 <?php
 $stmt->close();

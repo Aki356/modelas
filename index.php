@@ -16,6 +16,9 @@
 </body>
 </html> -->
 
-<?php include("src/head.php"); ?>
+<?php $title_page = "Будущий моделист-конструктор";
+include("src/head.php"); ?>
+
+    
 
 <?php include("src/footer.php"); ?>

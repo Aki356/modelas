@@ -1,32 +1,22 @@
 <?php
 include("connect.php");
 
+
 $result = $conn->query("SELECT * FROM news ORDER BY created_at DESC");
 ?>
+<?php $title_page = "Новости сайта";
+include("src/head.php"); ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>News</title>
-    <style>
-        .news-item {
-            margin-bottom: 20px;
-        }
-        .news-title {
-            font-size: 1.5em;
-            color: blue;
-            text-decoration: none;
-        }
-        .news-title:hover {
-            text-decoration: underline;
-        }
-        .news-image {
-            max-width: 300px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
+    <div class="directory_path">
+        <ul>
+            <li>
+                <a href="index.php">Главная</a>
+            </li>
+            <li>
+                <span>Новости</span>
+            </li>
+        </ul>
+    </div>
     <h1>Latest News</h1>
     <?php while ($row = $result->fetch_assoc()): ?>
         <div class="news-item">
@@ -40,8 +30,21 @@ $result = $conn->query("SELECT * FROM news ORDER BY created_at DESC");
         </div>
         <hr>
     <?php endwhile; ?>
+
+<?php include("src/footer.php"); ?>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>News</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
 </body>
-</html>
+</html> -->
 
 <?php
 $conn->close();

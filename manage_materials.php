@@ -41,13 +41,9 @@ if (!empty($filter_title)) {
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
+<?php $title_page = "Материалы в панели администратора";
+include("src/head.php"); ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Manage Materials</title>
-</head>
-<body>
     <h1>Manage Materials</h1>
     
     <h2>Filter Materials</h2>
@@ -84,8 +80,17 @@ $result = $stmt->get_result();
     </table>
     <a href="add_material.php">Add New Material</a>
     <a href="admin_panel.php">Back to Admin Panel</a>
+
+<?php include("src/footer.php"); ?>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Materials</title>
+</head>
+<body>
+    
 </body>
-</html>
+</html> -->
 
 <?php
 $stmt->close();

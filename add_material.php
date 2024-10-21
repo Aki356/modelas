@@ -1,5 +1,6 @@
 <?php
 session_start();
+$title_page = "Добавить материал";
 
 if (!isset($_SESSION['username'])) {
     header('Location: login.php');
@@ -46,12 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add Material</title>
-</head>
-<body>
+<?php include("src/head.php"); ?>
+
     <h1>Add Material</h1>
     <?php if ($error_message): ?>
         <p style="color: red;"><?php echo $error_message; ?></p>
@@ -64,5 +61,14 @@ $conn->close();
         <button type="submit">Add Material</button>
     </form>
     <a href="admin_panel.php">Back to Admin Panel</a>
+
+<?php include("src/footer.php"); ?>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Add Material</title>
+</head>
+<body>
+    
 </body>
-</html>
+</html> -->

@@ -75,13 +75,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $conn->close();
 ?>
+<?php $title_page = "Редактировать материалы";
+include("src/head.php"); ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit Material</title>
-</head>
-<body>
     <h1>Edit Material</h1>
     <form method="post" enctype="multipart/form-data">
         <input type="text" name="title" value="<?php echo htmlspecialchars($material['title']); ?>" required>
@@ -94,5 +90,14 @@ $conn->close();
     <a href="<?php echo $material['file_path']; ?>" download>Download Current File</a>
     <br>
     <a href="manage_materials.php">Cancel</a>
+
+<?php include("src/footer.php"); ?>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Material</title>
+</head>
+<body>
+    
 </body>
-</html>
+</html> -->

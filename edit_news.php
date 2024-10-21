@@ -42,13 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $conn->close();
 ?>
+<?php $title_page = "Редактировать новости";
+include("src/head.php"); ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit News</title>
-</head>
-<body>
     <h1>Edit News</h1>
     <form method="post">
         <input type="text" name="title" value="<?php echo htmlspecialchars($news['title']); ?>" required>
@@ -60,5 +56,14 @@ $conn->close();
         <img src="<?php echo $news['image']; ?>" alt="<?php echo htmlspecialchars($news['title']); ?>" style="max-width: 300px;">
     <?php endif; ?>
     <a href="manage_news.php">Cancel</a>
+
+<?php include("src/footer.php"); ?>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Edit News</title>
+</head>
+<body>
+    
 </body>
-</html>
+</html> -->
