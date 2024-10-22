@@ -13,9 +13,13 @@ if (isset($_GET['logout'])) {
     exit();
 }
 ?>
-<?php $title_page = "Панель администратора";
-include("src/head.php"); ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Админ панель</title>
+</head>
+<body>
     <h1>Админ панель</h1>
     <h2>Управление новостями</h2>
     <ul>
@@ -30,17 +34,13 @@ include("src/head.php"); ?>
          <li><a href="view_materials.php">Просмотр материалов для пользователей</a></li> <!-- Добавленная ссылка -->
     </ul>
     </ul>
+    <h2>Manage Products</h2>
+<ul>
+    <li><a href="add_product.php">Add New Product</a></li>
+    <li><a href="manage_products.php">Manage Existing Products</a></li>
+</ul>
     <form method="get" action="">
         <button type="submit" name="logout">Выйти</button>
     </form>
-
-<?php include("src/footer.php"); ?>
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Админ панель</title>
-</head>
-<body>
-    
 </body>
-</html> -->
+</html>
