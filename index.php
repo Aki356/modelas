@@ -32,16 +32,18 @@ include("src/head.php"); ?>
     </div>
 </div>
 <div class="video_description container">
-    <iframe
-        width="720"
-        height="405"
-        src="https://rutube.ru/play/embed/0c62410f478f6fa79d68ad8b6aa73374"
-        frameBorder="0"
-        allow="clipboard-write; autoplay"
-        webkitAllowFullScreen
-        mozallowfullscreen
-        allowFullScreen >
-    </iframe>
+    <div class="video_description-iframe">
+        <iframe
+            width="720"
+            height="405"
+            src="https://rutube.ru/play/embed/0c62410f478f6fa79d68ad8b6aa73374"
+            frameBorder="0"
+            allow="clipboard-write; autoplay"
+            webkitAllowFullScreen
+            mozallowfullscreen
+            allowFullScreen >
+        </iframe>
+    </div>
     <div class="video_description-div">
         <p>
         Набор "Будущий моделист-конструктор" предназначен для занятий в системе дополнительного образования и/или внеурочной деятельности образовательной организации и решает одну из основных задач по организации работы образовательных программ технической направленности без использования специального дорогостоящего оборудования, что способствует увеличению вовлеченности детей в техническое творчество. Также комплекс может быть использован при необходимости организации профильных лагерных смен, в том числе дневного пребывания на базе образовательной организации.
@@ -94,6 +96,15 @@ include("src/head.php"); ?>
             <li>Каждая модель логически следует из предыдущей по принципу от простого к сложному</li>
         </div>
     </ul>
+</div>
+<div class="educational_programs container">
+    <h2>Учебные программы</h2>
+    <div class="educational_programs__container">
+        <p>Дополнительное образование</p>
+        <div class="educational_programs__program">
+            <img src="image/backgrounds/section4_div1.jpg" alt="">
+        </div>
+    </div>
 </div>
     
 
