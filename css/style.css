@@ -111,6 +111,32 @@ body,*{
 .classBody{
     padding-top: 170px;
 }
+.btn-brown-white{
+    border: 1px solid var(--text);
+    background-color: var(--text);
+    border-radius: 100px;
+    width: 190px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.btn-brown-white>a{
+    text-decoration: none;
+    color: var(--bg);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px 15px 20px 25px;
+    display: block;
+    width: 100%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.btn-brown-white:hover{
+    background-color: var(--orange);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
 .btn-y-o{
     border: 1px solid var(--orange);
     background-color: var(--orange);
@@ -124,7 +150,7 @@ body,*{
     color: var(--bg);
     font-weight: bold;
     font-size: 18px;
-    padding: 10px 15px 10px 25px;
+    padding: 20px 15px 20px 25px;
     display: block;
     width: 100%;
     -webkit-transition: all 0.5s ease;
@@ -141,6 +167,37 @@ body,*{
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
+.image-container {
+    position: relative;
+    /* display: inline-block; */
+}
+.hover-image {
+    height: auto; /* Авто высота */
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-panel);
+    color: var(--text);
+    text-align: left;
+    font-size: 18px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    white-space: nowrap;
+    z-index: 10;
+}
+.tooltip>ul>li{
+    display: flex;
+    justify-content: space-between;
+}
+.tooltip-l{
+    /* border-left: 1px solid var(--text); */
+    margin-left: 5px;
+}
+/* .tooltip>p{
+    width: 80%;
+} */
 
 /* Стили для модального окна */
 .modal {
@@ -182,7 +239,10 @@ body,*{
     width: 1300px;  /*Ширина блока */
     margin: 0 auto; /*Блок по центру */
 }
-
+h2{
+    font-size: 30px;
+    margin: 30px 0;
+}
 
 header{
     background: var(--bg);
@@ -384,16 +444,66 @@ header{
     width: 100%;
 }
 
-.educational_programs>h2{
-    font-size: 30px;
-    margin: 30px 0;
+.educational_programs__programs{
+    display: flex;
+    justify-content: space-between;
+}
+.educational_programs__container{
+    font-size: 23px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.educational_programs__container>p{
+    width: 212px;
+    margin: auto 0;
 }
 .educational_programs__program{
-    width: 200px;
+    /* width: 212px; */
+    margin: 20px auto;
+    padding: 5px;
+    border: 4px solid var(--text);
+    border-radius: 100%;
+    display: flex;
 }
 .educational_programs__program>img{
-    width: 100%;
+    width: 200px;
     border-radius: 100%;
     height: 200px;
-    /* добавить обрезку фотки */
+    object-fit: cover;
+}
+.educational_programs__program:hover{
+    padding: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.educational_programs__program>img:hover{
+    width: 210px;
+    height: 210px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+.communicate{
+    background-color: var(--orange);
+    margin: 90px auto;
+    border-radius: 25px;
+}
+.communicate__container{
+    padding: 45px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.communicate__container>h2{
+    font-size: 36px;
+    color: var(--bg);
+}
+.communicate__container>p{
+    color: var(--bg);
+    width: 30%;
+    text-align: center;
 }
