@@ -99,13 +99,85 @@ include("src/head.php"); ?>
 </div>
 <div class="educational_programs container">
     <h2>Учебные программы</h2>
-    <div class="educational_programs__container">
-        <p>Дополнительное образование</p>
-        <div class="educational_programs__program">
-            <img src="image/backgrounds/section4_div1.jpg" alt="">
+    <div class="educational_programs__programs">
+        <div class="educational_programs__container image-wrapper">
+            <div class="educational_programs__program ">
+                <img class="hover-image" src="image/backgrounds/section4_div1.jpg" alt="">
+            </div>
+            <p>Дополнительное образование</p>
+            <div class="tooltip">
+                <ul>
+                    <li>Начальное техническое моделирование<div class="tooltip-l"> | 144 часа</div></li>
+                    <li>Авиамоделирование<div class="tooltip-l"> | 36 часов</div></li>
+                    <li>Судомоделирование<div class="tooltip-l"> | 36 часов</div></li>
+                    <li>Автомоделирование<div class="tooltip-l"> | 36 часов</div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="educational_programs__container image-wrapper">
+            <div class="educational_programs__program ">
+                <img class="hover-image" src="image/backgrounds/section4_div2.jpg" alt="">
+            </div>
+            <p>Профильные смены</p>
+            <div class="tooltip">
+                <ul>
+                    <li>Техническое моделирование<div class="tooltip-l"> | 12 часов</div></li>
+                    <li>Авиамоделирование<div class="tooltip-l"> | 12 часов</div></li>
+                    <li>Компьютерное моделирование и программирование<div class="tooltip-l"> | 12 часов</div></li>
+                    <li>Автомоделирование<div class="tooltip-l"> | 12 часов</div></li>
+                    <li>Авиа-, автомоделирование<div class="tooltip-l"> | 12 часов</div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="educational_programs__container image-wrapper">
+            <div class="educational_programs__program ">
+                <img class="hover-image" src="image/backgrounds/section4_div3.jpg" alt="">
+            </div>
+            <p>Инженерные классы</p>
+            <div class="tooltip">
+                <ul>
+                    <li>Инженер авиастроительного профиля (5 класс)<div class="tooltip-l"> | 70 часов</div></li>
+                    <li>Авиамоделирование<div class="tooltip-l"> | 36 часов</div></li>
+                    <li>Компьютерное моделирование и программирование<div class="tooltip-l"> | 68 часов</div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="educational_programs__container image-wrapper">
+            <div class="educational_programs__program hover-image">
+                <img src="image/backgrounds/section4_div4.jpg" alt="">
+            </div>
+            <p>Уроки технологии</p>
+            <div class="tooltip" >
+                <ul>
+                    <li>Начальное техническое моделирование<div class="tooltip-l"> | 12 часов</div></li>
+                    <li>Авиа-, автомоделирование<div class="tooltip-l"> | 12 часов</div></li>
+                    <li>Авиамоделирование<div class="tooltip-l"> | 12 часов</div></li>
+                    <li>Судомоделирование<div class="tooltip-l"> | 12 часов</div></li>
+                    <li>Автомоделирование<div class="tooltip-l"> | 12 часов</div></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
-    
+<div class="communicate container">
+    <div class="communicate__container">
+        <h2>Появились вопросы?</h2>
+        <p>Оставьте ваше сообщение, а мы вам обязательно перезвоним</p>
+        <div class="btn-brown-white">
+            <a href="#">Написать нам ></a>
+        </div>
+    </div>
+</div>
+<div class="news container">
+
+</div>
+<div class="products container">
+
+</div>
+<div class="methodological_support container">
+    <h2>Методическое сопровождение</h2>
+    <h3>Стажировки для педагогов</h3>
+    <p>Для ознакомления с готовой методикой обучения и принципами работы с моделями для педагогов устраивается бесплатная стажировка.</p>
+</div>
 
 <?php include("src/footer.php"); ?>
