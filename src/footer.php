@@ -6,6 +6,21 @@
         <img id="modal-image">
       </div>
     </div>
+    <div id="formModal">
+        <div id="modalContent">
+            <span class="close" id="closeFormBtn">&times;</span>
+            <h2>Форма обратной связи</h2>
+            <form class="form" id="feedbackForm">
+                <input type="text" placeholder="Имя" id="name" name="name" required><br><br>
+                <input class="mask-phone" type="text" placeholder="Телефон" id="phone" name="phone" required><br><br>
+                <textarea id="message" placeholder="Обращение" name="message" required></textarea><br><br>
+                <div class="btn-brown-white">
+                    <a>Отправить</a>
+                </div>
+                <a href="">Нажимаю кнопку «Отправить», вы соглашаетесь с условиями Политики конфиденциальности</a>
+            </form>
+        </div>
+    </div>
 <footer>
         <div class="bottom">
             <div class="footer__logo">
@@ -26,10 +41,50 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
     <!-- <script src="vendors/slick/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://snipp.ru/cdn/maskedinput/jquery.maskedinput.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+    <script src="https://snipp.ru/cdn/maskedinput/jquery.maskedinput.min.js"></script>
     <script src="js/main.js"> </script>
     <!-- <script src="js/js.js"></script> -->
+    <script>
+        // Получаем элементы
+        const formModal = document.getElementById('formModal');
+        const openFormBtn = document.getElementById('openFormBtn');
+        const closeFormBtn = document.getElementById('closeFormBtn');
+        const feedbackForm = document.getElementById('feedbackForm');
+
+        // Открываем форму
+        openFormBtn.onclick = function() {
+            formModal.style.display = 'block';
+            document.getElementById('nav').style.display = 'none';
+            document.body.style.overflow = 'hidden'; // Блокируем прокрутку
+        }
+
+        // Закрываем форму
+        closeFormBtn.onclick = function() {
+            formModal.style.display = 'none';
+            document.getElementById('nav').style.display = 'block';
+            document.body.style.overflow = ''; // Восстанавливаем прокрутку
+        }
+
+        // Закрываем форму при клике вне формы
+        window.onclick = function(event) {
+            if (event.target === formModal) {
+                formModal.style.display = 'none';
+                document.getElementById('nav').style.display = 'block';
+                document.body.style.overflow = ''; // Восстанавливаем прокрутку
+            }
+        }
+
+        // Обработка отправки формы (пока не работает, т.к. я поменяла button на a(ссылку) и type=submit не получится поставить)
+        feedbackForm.onsubmit = function(event) {
+            event.preventDefault(); // Предотвращаем отправку формы
+            alert('Форма отправлена!'); // Здесь можно добавить логику отправки данных
+            formModal.style.display = 'none'; // Закрываем форму после отправки
+            document.getElementById('nav').style.display = 'block';
+            document.body.style.overflow = ''; // Восстанавливаем прокрутку
+            feedbackForm.reset(); // Очищаем форму
+        }
+    </script>
     <script>
         // Получаем элементы модального окна и изображения
         const modal = document.getElementById("modal");
@@ -70,10 +125,10 @@
     });
     });
     </script>
-    <!-- <script>
+    <script>
         $('.mask-phone').mask('+7 (999) 999-99-99');
     </script>
-    <script>
+    <!-- <script>
     if(sessionStorage.getItem("message")){
         alert(sessionStorage.getItem("message"));
         sessionStorage.removeItem("message");

@@ -32,7 +32,7 @@ session_start();
     <!-- <div id="preloader">
         <div class="spinner"></div>
     </div> -->
-    <header>
+    <header id="nav">
         <div class="top container">
             <div class="top__logo">
                 <a href="index.php"><img src="image/logo.jpg" alt="Логотип"></a>
@@ -64,6 +64,9 @@ session_start();
             </div>
             <div class="top__email">
                 <p><a href="mailto:lubovv.glotova@yandex.ru">lubovv.glotova@yandex.ru</a></p>
+            </div>
+            <div class="btn-white-orange">
+                <a id="openFormBtn">Написать нам ></a>
             </div>
         </div>
         
