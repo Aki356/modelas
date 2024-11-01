@@ -164,7 +164,7 @@ include("src/head.php"); ?>
         <h2>Появились вопросы?</h2>
         <p>Оставьте ваше сообщение, а мы вам обязательно перезвоним</p>
         <div class="btn-brown-white">
-            <a href="#">Написать нам ></a>
+            <a id="openFormBtn">Написать нам ></a>
         </div>
     </div>
 </div>

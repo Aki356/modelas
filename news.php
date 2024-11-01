@@ -6,8 +6,7 @@ $result = $conn->query("SELECT * FROM news ORDER BY created_at DESC");
 ?>
 <?php $title_page = "Новости сайта";
 include("src/head.php"); ?>
-
-    <div class="directory_path">
+    <div class="directory_path container">
         <ul>
             <li>
                 <a href="index.php">Главная</a>
@@ -17,19 +16,26 @@ include("src/head.php"); ?>
             </li>
         </ul>
     </div>
-    <h1>Latest News</h1>
-    <?php while ($row = $result->fetch_assoc()): ?>
-        <div class="news-item">
-            <a href="news_detail.php?id=<?php echo $row['id']; ?>">
-                <h2 class="news-title"><?php echo $row['title']; ?></h2>
-                <?php if ($row['image']): ?>
-                    <img class="news-image" src="<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
-                <?php endif; ?>
-            </a>
-            <p>Published on: <?php echo $row['created_at']; ?></p>
+    <div class="news container">
+        <h1>Новости</h1>
+        <div class="news__items">
+        <?php while ($row = $result->fetch_assoc()): ?>
+            <div class="news__item">
+                <a href="news_detail.php?id=<?php echo $row['id']; ?>">
+                    <div class="news__item-img">
+                        <?php if ($row['image']): ?>
+                            <img src="<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
+                        <?php endif; ?>
+                    </div>
+                </a>
+                <p class="news__date"><?php echo $row['created_at']; ?></p>
+                <p><a class="news-h2" href="news_detail.php?id=<?php echo $row['id']; ?>">
+                    <?php echo $row['title']; ?>
+                </a></p>
+            </div>
+        <?php endwhile; ?>
         </div>
-        <hr>
-    <?php endwhile; ?>
+    </div>
 
 <?php include("src/footer.php"); ?>
 
